@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   function refreshFileList() {
-    fetch('http://localhost:3001/files')
+    fetch('/files')
       .then(response => response.json())
       .then(data => {
         const fileListElement = document.getElementById('fileList');
@@ -77,5 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Automatically remove the notification after a few seconds
     setTimeout(() => {
       notificationsElement.removeChild(notification);
-    }, 3000);
+    }, 3001);
   }
